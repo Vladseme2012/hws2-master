@@ -29,22 +29,18 @@
     flex-direction: row;
     justify-content: end;
     gap: 5px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 10px;
     background-color: #0066cc;
-    box-shadow: 0px 5px 20px 0px blur(2) #1d212608;
 }
 
 .text:after {
     content: '';
     position: absolute;
-    left: 90%;
-    top: 35%;
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-bottom: 20px solid #0066cc;
-    border-left: 20px solid #0066cc;
-    box-shadow: 0px 5px 20px 0px blur(2) #1d212608;
+    left: 100%;
+    bottom: 0;
+    width: 26px;
+    height: 26px;
+    background: radial-gradient(60px at top right, transparent 49%, #0066cc 51%) no-repeat right bottom;
     z-index: -1;
 }
 
@@ -61,6 +57,8 @@
     text-align: end;
     font-size: 16px;
     font-weight: 400;
+    word-break: break-all;
+    white-space: normal;
     color: #ffffff;
 }
 

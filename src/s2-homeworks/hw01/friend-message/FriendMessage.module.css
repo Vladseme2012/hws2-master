@@ -32,20 +32,18 @@
     flex-direction: row;
     justify-content: end;
     gap: 5px;
-    border-radius: 10px;
+    border-radius: 10px 10px  10px  0;
     background-color: #f5f7fb;
-    box-shadow: 0px 5px 20px 0px blur(2) #1d212608;
 }
 
 .friendText:after {
     content: '';
     position: absolute;
-    right: 88%;
-    top: 35%;
-    border: 20px solid transparent;
-    border-right: 20px solid #f5f7fb;
-    border-bottom: 20px solid #f5f7fb;
-    box-shadow: 0px 5px 20px 0px blur(2) #1d212608;
+    right: 100%;
+    bottom: 0;
+    width: 26px;
+    height: 26px;
+    background: radial-gradient(60px at top left, transparent 49%,#f5f7fb 51%) no-repeat right bottom;
     z-index: -1;
 }
 
@@ -62,6 +60,8 @@
     text-align: start;
     font-size: 16px;
     font-weight: 400;
+    word-break: break-all;
+    white-space: normal;
     color: #000000;
 }
 
