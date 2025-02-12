@@ -4,7 +4,6 @@ import s2 from '../../s1-main/App.module.css';
 import GreetingContainer from './GreetingContainer';
 
 /*
-* 2 - указать нужный тип в useState с users
 * 3 - дописать типы и логику функции pureAddUserCallback и проверить её тестами
 * 4 - в файле GreetingContainer.tsx дописать типизацию пропсов
 * 5 - в файле GreetingContainer.tsx указать нужные типы в useState с name и error
@@ -37,7 +36,7 @@ export const pureAddUserCallback: PureAddUserCallbackType = (name: string, setUs
 const HW3 = () => {
     const [users, setUsers] = useState<UserType[]>([]);
 
-    const addUserCallback = (name: string) => { // need to fix any
+    const addUserCallback = (name: string) => {
         pureAddUserCallback(name, setUsers, users);
     };
 
