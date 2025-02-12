@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
-import { v1 } from 'uuid'
-import s2 from '../../s1-main/App.module.css'
-import GreetingContainer from './GreetingContainer'
+import React, {Dispatch, SetStateAction, useState} from 'react';
+import {v1} from 'uuid';
+import s2 from '../../s1-main/App.module.css';
+import GreetingContainer from './GreetingContainer';
 
 /*
-* 1 - описать тип UserType
 * 2 - указать нужный тип в useState с users
 * 3 - дописать типы и логику функции pureAddUserCallback и проверить её тестами
 * 4 - в файле GreetingContainer.tsx дописать типизацию пропсов
@@ -19,22 +18,28 @@ import GreetingContainer from './GreetingContainer'
 
 // types
 export type UserType = {
-    _id: any // need to fix any
-    name: any // need to fix any
+    _id: string,
+    name: string,
 }
 
-export const pureAddUserCallback = (name: any, setUsers: any, users: any) => { // need to fix any
-    const user = { // need to fix
-    }
-    setUsers([...users, user])
-}
+export type PureAddUserCallbackType = (name: string, setUsers: Dispatch<SetStateAction<UserType[]>>, users: UserType[]) => void;
+
+export const pureAddUserCallback: PureAddUserCallbackType = (name: string, setUsers: Dispatch<SetStateAction<UserType[]>>, users: UserType[]) => {
+    const userId: string = v1();
+    const user: UserType = {
+        _id: userId,
+        name: name,
+    };
+
+    setUsers([...users, user]);
+};
 
 const HW3 = () => {
-    const [users, setUsers] = useState<any>([]) // need to fix any
+    const [users, setUsers] = useState<UserType[]>([]);
 
-    const addUserCallback = (name: any) => { // need to fix any
-        pureAddUserCallback(name, setUsers, users)
-    }
+    const addUserCallback = (name: string) => { // need to fix any
+        pureAddUserCallback(name, setUsers, users);
+    };
 
     return (
         <div id={'hw3'}>
@@ -48,7 +53,7 @@ const HW3 = () => {
                 />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default HW3
+export default HW3;
