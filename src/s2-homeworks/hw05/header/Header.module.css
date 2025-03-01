@@ -1,8 +1,29 @@
 .burgerMenuIcon {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+.burgerMenuIcon:hover {
+    cursor: pointer;
 }
 
 .header {
+    max-width: 1160px;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    margin-bottom: 50px;
 }
 
 .header h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    background-color: #FFFFFF;
 }
