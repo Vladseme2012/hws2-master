@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 315px;
-    height: 100vh;
+    height: 0;
     padding: 15px 24px;
     opacity: 0;
     display: flex;
@@ -11,21 +11,16 @@
     align-items: center;
     background-color: #ffffff;
     box-shadow: 0 1px 2px 0 #1D21261A, 0 10px 40px 0 #1D212621;
-    transition: opacity 2s linear;
+    transform: translateX(-100%);
+    transition: .7s;
+    z-index: 10;
 }
 
 .sidebar.open {
-    /*height: 100vh;*/
+    transition: 0.4s;
+    height: 100vh;
     opacity: 1;
-    z-index: 10;
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 15%;*/
-    /*height: 100vh;*/
-    /*transition: 0.7s;*/
-    /*transform: translateX(0%);*/
-
+    transform: translateX(0%);
 }
 
 .background {
@@ -37,12 +32,6 @@
     background-color: #000;
     opacity: 0.3;
     z-index: 9;
-
-    /*width: 100vw;*/
-    /*height: 100vh;*/
-    /*background: #000000;*/
-    /*opacity: 0.2;*/
-    /*z-index: -2;*/
 }
 
 .nav {
