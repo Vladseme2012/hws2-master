@@ -1,23 +1,64 @@
 .item {
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .item:last-of-type {
+    border-bottom: none;
 }
 
+.item .ageCol {
+    font-weight: bold;
+}
+
+td[id*='hw8-user-age'] {
+    font-weight: 600;
+}
+
+
 .users {
+    border-collapse: collapse;
 }
 
 .buttonsContainer {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: flex-end;
 }
 
 .container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    padding: 70px;
 }
 
 .thead {
+    border: 1px solid #E5E5E5;
+    background-color: #E5E5E5;
+    min-height: 36px;
+    font-family: Roboto sans-serif;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .nameCol {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    text-align: start;
+    padding-left: 17px;
 }
 
 .ageCol {
+    width: 380px;
+    min-height: 36px;
+    text-align: start;
 }
+
