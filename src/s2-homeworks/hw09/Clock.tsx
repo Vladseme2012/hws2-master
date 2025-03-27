@@ -14,33 +14,27 @@ function Clock() {
         const id: number = window.setInterval(() => {
             setDate(new Date());
         }, 1000);
+        console.log(id);
         setTimerId(id);
-
-        // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
-        // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-
     };
 
     const stop = () => {
         clearInterval(timerId);
         setTimerId(undefined);
-        // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-
     };
 
-    const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
+    const onMouseEnter = () => {
         setShow(true);
     };
-    const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
+    const onMouseLeave = () => {
         setShow(false);
     };
 
     const stringTime = moment().format('hh:mm:ss') || <br/>;
-    const stringDate = moment().format('DD.MM.YYYY') || <br/>;
-
-    // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = moment().format('dddd') || <br/>; // пишут студенты
-    const stringMonth = moment().format('MMMM') || <br/>; // пишут студенты
+    const stringDate = moment().format(`DD.MM.${date.getFullYear()}`) || <br/>;
+    const stringDay = moment().format('dddd') || <br/>;
+    const stringMonth = moment().format('MMMM') || <br/>;
+    let isDisabled: boolean = Boolean(timerId);
 
     return (
         <div className={s.clock}>
@@ -50,7 +44,7 @@ function Clock() {
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <span id={'hw9-day'}>{stringDay}</span>,{' '}
+                <span id={'hw9-day'}>{stringDay + ','}</span>
                 <span id={'hw9-time'}>
                     <strong>{stringTime}</strong>
                 </span>
@@ -74,14 +68,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={isDisabled}
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!isDisabled}
                     onClick={stop}
                 >
                     stop
