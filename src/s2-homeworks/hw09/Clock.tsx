@@ -11,10 +11,10 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false);
 
     const start = () => {
+        stop();
         const id: number = window.setInterval(() => {
             setDate(new Date());
         }, 1000);
-        console.log(id);
         setTimerId(id);
     };
 
@@ -30,7 +30,8 @@ function Clock() {
         setShow(false);
     };
 
-    const stringTime = moment().format('hh:mm:ss') || <br/>;
+    // const stringTime = moment().format('hh:mm:ss') || <br/>;
+    const stringTime = date.toLocaleTimeString('ru-RU') || <br/>;
     const stringDate = moment().format(`DD.MM.${date.getFullYear()}`) || <br/>;
     const stringDay = moment().format('dddd') || <br/>;
     const stringMonth = moment().format('MMMM') || <br/>;
