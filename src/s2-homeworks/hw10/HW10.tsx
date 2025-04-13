@@ -9,7 +9,6 @@ import {Loader} from './Loader';
 const HW10 = () => {
     // const isLoading = useSelector((state: RootState): InitStateType => state.loading);
     const isLoading = useSelector((state: AppStoreType) => state.loading.isLoading);
-    console.log(isLoading);
     const dispatch = useDispatch();
     const setLoading = () => {
         dispatch(loadingAC(true));

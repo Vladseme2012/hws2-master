@@ -1,8 +1,25 @@
+
 .container {
+    width: 350px;
+    margin: 50px 70px;
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .number {
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;;
 }
+
+
+
