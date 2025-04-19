@@ -13,11 +13,12 @@
     --background: #212A34;
 }
 
-html {
+[id*='hw12'] {
     background-color: var(--background);
     color: var(--color);
 }
 
 .select {
-
+    display: inline-block;
+    margin: 100px 0 150px 70px;
 }
