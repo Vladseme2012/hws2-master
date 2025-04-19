@@ -1,16 +1,16 @@
 [data-theme='1'] {
-    --color: #000000;
-    --background: #FFFFFF;
+    --color: rgba(0, 0, 0, 1);
+    --background: rgba(255, 255, 255, 1);
 }
 
 [data-theme='2'] {
-    --color: #000000;
-    --background: #DDEEFF;
+    --color: rgba(0, 0, 0, 1);
+    --background: rgba(221, 238, 255, 1);
 }
 
 [data-theme='3'] {
-    --color: #FFFFFF;
-    --background: #212A34;
+    --color: rgba(255, 255, 255, 1);
+    --background: rgba(33, 42, 52, 1);
 }
 
 [id*='hw12'] {
