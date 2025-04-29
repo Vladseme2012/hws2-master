@@ -1,22 +1,75 @@
 .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+    max-width: 1020px;
+    width: 100%;
+    margin: 70px 0 30px 70px;
 }
 
 .responseContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1020px;
+    width: 100%;
+    min-height: 315px;
+    margin-left: 166px;
+    margin-bottom: 30px;
 }
 
 .imageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 420px;
+    width: 100%;
+    min-height: 315px;
 }
 
 .image {
+    max-width: 420px;
+    width: 100%;
+    min-height: 315px;
 }
 
-.textContainer{
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 510px;
+    width: 100%;
 }
 
 .code {
+    align-self: start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: start;
+    color: #000000;
+    margin-bottom: 12px;
 }
 
 .text {
+    align-self: start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: start;
+    color: #000000;
 }
+
 .info {
+    align-self: start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: start;
+    color: #000000;
 }

@@ -77,7 +77,7 @@
 }
 
 .button:disabled {
-    width: 135px;
+    width: 150px;
     border: none;
     background: #b3bfd5;
     color: #6184b5;
