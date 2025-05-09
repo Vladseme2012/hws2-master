@@ -1,7 +1,23 @@
 .tech {
-
+    margin-left: 70px;
+    margin-bottom: 20px;
 }
 
 .loading {
-
+    margin-left: 410px;
 }
+
+.input {
+    width: 100%;
+    max-width: 468px;
+    min-height: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    padding-left: 12px;
+}
+
+.input:focus {
+    border: 1px solid #0066CC;
+}
+
